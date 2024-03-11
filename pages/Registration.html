@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sindbad Registration Form</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	<link rel="stylesheet" href="../css/styling.css">
+	  
+	<script language="javascript">
+	
+	function validate()
+		{
+			var emailval = document.forms[0].email.value;
+			
+			if(emailval!="" && emailval.includes("@"))
+				{
+				return(true);
+				}
+			
+			else
+				{
+					alert("Not a Valid Email");
+					return(false);
+				}
+			
+		return(true);
+		}
+		
+	</script>
+	
+  </head>
+  <body>
+  	<!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+	<script src="js/bootstrap-4.4.1.js"></script>
+	  
+	  <div class="container">
+	  
+	  	<header>Registration</header>
+		  
+		  <form class="form1" name="form_registration" action="Registration.cfm" method="post" onSubmit="return validate()">
+		  
+		  	<div class="form-first">
+			  
+			  <div class="details personal">
+			  
+			  	<span class="title">Personal Details</span>
+				  
+				  <div class="fields">
+				  
+				  	<div class="input-field">
+						
+						<label>First Name</label>
+					
+						<input name="firstname" type="text" placeholder="Enter Your Firstname" required >
+					  
+					</div>
+					  
+					  
+					  <div class="input-field">
+						
+						<label>Surname Name</label>
+					
+						<input name="surname" type="text" placeholder="Enter Your Surname" required >
+					  
+					</div>
+					  
+					  
+					  <div class="input-field">
+						
+						<label>Date of Birth</label>
+					
+						<input name="dob" type="date" placeholder="Enter Your Date of Birth" required>
+					  
+					</div>
+					 
+				  
+				  </div>
+			  
+			  </div>
+				
+				
+			<div class="details communication">
+			  
+			  	<span class="title">Communication Details</span>
+				  
+				  <div class="fields">
+				  
+				  	 <div class="input-field">
+						
+						<label>Email ID</label>
+					
+						<input name="email" type="email" placeholder="Enter Your Email ID" required >
+					  
+					</div>
+					  
+					   <div class="input-field">
+						
+						<label>Mobile Number</label>
+					
+						<input name="Phone_Num" type="text" placeholder="Enter Your Mobile" required pattern="[0-9]{8,8}" data-error="Phone number must be 8 digits long">
+					  
+					</div>
+					  
+					   <div class="input-field">
+						
+						<label>Country Code</label>
+					
+						<input name="ccode" type="text" placeholder="Enter Your Code" required  pattern="[0-9]{3,3}"
+						 data-error="Postcode should be numbers only and be 3 characters in length">
+					  
+					</div>
+					 
+				  
+				  </div>
+			  
+			  </div>
+				
+				<div class="details location">
+			  
+			  	<span class="title">Location Details</span>
+				  
+				  <div class="fields">
+				  
+				  	 <div class="input-field">
+						
+						<label>Street Address 1</label>
+					
+						<input name="address1" type="text" placeholder="Enter Your Address" required>
+					  
+					</div>
+					  
+					   <div class="input-field">
+						
+						<label>Street Address 2</label>
+					
+						<input name="address2" type="text" placeholder="Enter Your Way No" required>
+					  
+					</div>
+					  
+					   <div class="input-field">
+						
+						<label>Region/Area</label>
+					
+						<input name="region" type="text" placeholder="Enter Your Region" required>
+					  
+					</div>
+					 
+				  
+				  </div>
+					
+					<input class="nextBtn" type="submit" onClick="validate()" value="Register">
+						
+						<i class="uil uil-navigator"></i>
+				
+			  
+			  </div>
+			  
+			  
+			 </div>
+		  
+		  </form>
+	  
+	  </div>
+	  
+  </body>
+	
+</html>
